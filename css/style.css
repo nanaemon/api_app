@@ -1,0 +1,244 @@
+/* ベース */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f4ee; /* ちょっと紙っぽい色 */
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP",
+    system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* アプリ全体 */
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ヘッダー */
+.app-header {
+  margin-bottom: 16px;
+}
+
+.app-title {
+  margin: 0 0 4px;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+}
+
+.app-subtitle {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* 検索バー */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  min-width: 90px;
+}
+
+.field-label {
+  font-size: 12px;
+  margin-bottom: 2px;
+  color: #555;
+}
+
+.field-input {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #d3c7b8;
+  background: #fffdf8;
+  font-size: 14px;
+}
+
+/* ボタン */
+.btn {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #222;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn.primary {
+  background: #222;
+  color: #fff;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #222;
+}
+
+/* 検索結果の情報 */
+.result-info {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+  min-height: 20px;
+}
+
+.result-info #resultCount {
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #d3c7b8;
+  background: #fffdf8;
+}
+
+.result-date {
+  font-style: italic;
+}
+
+/* メインエリア */
+.app-main {
+  margin-top: 8px;
+}
+
+/* カードリスト */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 図書カード本体（横長） */
+.author-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d9d1c5;
+  background: #fffdf8;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* サムネイル部分 */
+.author-thumb {
+  flex: 0 0 64px;
+  height: 64px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e0d7c8; /* 画像ない時の背景 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* テキスト部分 */
+.author-body {
+  flex: 1;
+  min-width: 0; /* 折り返しのため */
+}
+
+/* 明朝っぽいタイトルだけフォント変える（本番は好みで webfont 追加してOK） */
+.author-name {
+  margin: 0 0 2px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Yu Mincho", "游明朝", "Noto Serif JP", "Hiragino Mincho ProN",
+    serif;
+}
+
+.author-birth {
+  margin: 0 0 2px;
+  font-size: 12px;
+  color: #555;
+}
+
+.author-role {
+  margin: 0 0 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* 長くなりがちなところは2行で省略 */
+.author-works {
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.author-amazon,
+.author-wiki {
+  margin: 0;
+  font-size: 12px;
+}
+
+.author-amazon a ,
+.author-wiki a{
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.author-amazon a:hover ,
+.author-wiki a:hover {
+  border-bottom-color: #222;
+}
+
+/* 「まだ検索されてない」メッセージ */
+.empty-message {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* スマホでの調整 */
+@media (max-width: 480px) {
+  .author-card {
+    padding: 10px;
+  }
+
+  .author-thumb {
+    flex-basis: 56px;
+    height: 56px;
+  }
+
+  .author-name {
+    font-size: 15px;
+  }
+}
+
+/* すこし広い画面での余白調整 */
+@media (min-width: 768px) {
+  .app {
+    padding: 24px 16px 32px;
+  }
+
+  .app-title {
+    font-size: 22px;
+  }
+
+  .search-bar {
+    gap: 12px;
+  }
+}

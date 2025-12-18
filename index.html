@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小説家が生まれた日</title>
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg?v=2">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app">
+    <header class="app-header">
+      <h1 class="app-title">作者が生まれた日</h1>
+      <p class="app-subtitle">
+        月日を選ぶと、その日に生まれた小説家と主な著作を表示します。
+      </p>
+
+      <form class="search-bar" id="searchForm">
+        <div class="field">
+          <label for="monthSelect" class="field-label">月</label>
+          <select id="monthSelect" class="field-input">
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="daySelect" class="field-label">日</label>
+          <select id="daySelect" class="field-input"></select>
+        </div>
+
+        <button class="btn primary" type="submit">検索</button>
+        <button class="btn ghost" type="button" id="todayBtn">今日</button>
+      </form>
+
+      <div class="result-info">
+        <span id="resultCount">0件</span>
+        <span id="resultDate" class="result-date"></span>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section id="cardsContainer" class="cards-container">
+        <!-- ここに JS から図書カードを追加していく -->
+
+        <!--
+        <article class="author-card">
+          <div class="author-thumb">
+            <img src="img/book-placeholder.png" alt="著者画像">
+          </div>
+          <div class="author-body">
+            <h2 class="author-name">夏目 漱石</h2>
+            <p class="author-birth">1867/02/09 生まれ</p>
+            <p class="author-role">日本の小説家・評論家</p>
+            <p class="author-works">
+              主な著作：こころ / 吾輩は猫である / 三四郎　←諦めよう
+            </p>
+            <p class="author-amazon">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Amazonで検索
+              </a>
+            </p>
+          </div>
+        </article>
+        -->
+      </section>
+
+      <p id="emptyMessage" class="empty-message">
+        日付を選んで「検索」を押すと、小説家が表示されます。
+      </p>
+    </main>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
+
+
