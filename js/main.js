@@ -354,7 +354,7 @@ function renderAuthorCard(person, month, day) {
     img.src = person.thumbUrl;
     img.alt = `${person.name}の写真`;
   } else {
-    img.src = "../img/book-placeholder.png"; // 共通の仮画像
+    img.src = "./img/book-placeholder.png"; // 共通の仮画像
     img.alt = "著者の画像";
   }
   thumbDiv.appendChild(img);
