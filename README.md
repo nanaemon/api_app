@@ -1,5 +1,6 @@
 # ①課題名
 小説家誕生日サーチ
+<img width="969" height="835" alt="スクリーンショット" src="https://github.com/user-attachments/assets/136d3574-4c3a-491a-bf3b-967562a90c50" />
 
 ## ②課題内容（どんな作品か）
 入力した日付が誕生日の「小説家」を一覧表示する。
@@ -11,6 +12,7 @@
 ・出てきた小説家カードから、Amazonリンク、Wikipediaの詳細ページへジャンプ
 
 ## ③アプリのデプロイURL
+https://nanaemon.github.io/api_app/
 
 ## ④アプリのログイン用IDまたはPassword（ある場合）
 なし
